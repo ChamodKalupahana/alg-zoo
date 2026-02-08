@@ -15,12 +15,12 @@ with th.no_grad():
 print(simple_model)
 print(y)
 # %%
-print("linear output matrix W^{h0}")
-print(simple_model.linear.weight)
 print("input matrix W^{hi}")
 print(simple_model.rnn._parameters["weight_ih_l0"])
 print("hidden matrix W^{hh}")
 print(simple_model.rnn._parameters["weight_hh_l0"])
+print("linear output matrix W^{h0}")
+print(simple_model.linear.weight)
 # %%
 possible_hidden_matricies = [key for key in simple_model.rnn._parameters]
 print("possible hidden matricies: f{possible_hidden_matricies}")
